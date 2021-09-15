@@ -1,14 +1,39 @@
 import { Component } from 'react';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+
 
 class HornedBeasts extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      votes: 0
+    };
+  };
+
+  handleClick = (event) => {
+    this.setState({
+      votes: this.state.votes + 1
+    });
+  };
+
   render() {
-    console.log(this.props);
-    return <div>
-      <img title={this.props.item.title} src={this.props.item.image_url} alt={this.props.item.keyword}></img>
-      <h2>{this.props.item.title}</h2>
-      <p>Number of horns: {this.props.item.horns}</p>
-      <p>{this.props.item.description}</p>
-    </div>;
+    return (
+      <>
+        <Col>
+          <Card>
+            <Card.Img src={this.props.item.image_url} onClick={this.handleClick} />
+            <Card.Body>
+              <Card.Title>{this.props.item.title}</Card.Title>
+              <Card.Text>
+                {this.props.item.description}
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>💚 {this.state.votes}</Card.Footer>
+          </Card>
+        </Col>
+      </>
+    );
   }
 }
 
