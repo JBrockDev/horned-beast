@@ -1,8 +1,17 @@
 .card-img {
-  max-height: 400px;
+  max-height: 300px;
   width: auto;
 }
 
 .card {
-  height: 600px;
+  max-height: 450px;
+}
+
+.modal-content img {
+  max-height: 90%;
+  width: 90%;
+}
+
+span {
+  cursor: pointer;
 }
