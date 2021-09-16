@@ -1,10 +1,8 @@
 import { Component } from "react";
 import Modal from "react-bootstrap/Modal";
 
-class BeastModal extends Component {
+class SelectedBeast extends Component {
   render() {
-    
-    console.log(this);
     return (
       <Modal
         size="lg"
@@ -26,4 +24,4 @@ class BeastModal extends Component {
   }
 }
 
-export default BeastModal;
+export default SelectedBeast;

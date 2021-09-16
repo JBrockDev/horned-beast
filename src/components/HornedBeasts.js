@@ -10,11 +10,17 @@ class HornedBeasts extends Component {
     };
   }
 
-  handleClick = (event) => {
+  handleImageClick = (event) => {
+    // this.setState({
+    //   votes: this.state.votes + 1,
+    // });
+    this.props.handleClick();
+  };
+
+  handleHeartClick = (event) => {
     this.setState({
       votes: this.state.votes + 1,
     });
-    this.props.handleClick();
   };
 
   render() {
@@ -22,11 +28,13 @@ class HornedBeasts extends Component {
       <>
         <Col>
           <Card>
-            <Card.Img src={this.props.item.image_url} onClick={this.handleClick} />
-            {/* <Card.Body>
-              <Card.Title>{this.props.item.title}</Card.Title>
-            </Card.Body> */}
-            <Card.Footer>💚 {this.state.votes}</Card.Footer>
+            <Card.Img
+              src={this.props.item.image_url}
+              onClick={this.handleImageClick}
+            />
+            <Card.Footer>
+              <span onClick={this.handleHeartClick}>💚</span> {this.state.votes}
+            </Card.Footer>
           </Card>
         </Col>
       </>
