@@ -10,12 +10,11 @@ class Header extends Component {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>Horned Beast Voting</Navbar.Brand>
-          <Nav>
-            <Search
-              searchHandler={this.props.searchHandler}
-              beasts={this.props.beasts}
-            />
-          </Nav>
+          <Search
+            searchHandler={this.props.searchHandler}
+            beasts={this.props.beasts}
+            filteredBeasts={this.props.filteredBeasts}
+          />
         </Container>
       </Navbar>
     );

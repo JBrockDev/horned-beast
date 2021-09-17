@@ -3,6 +3,13 @@ import HornedBeasts from "./HornedBeasts";
 import Row from "react-bootstrap/Row";
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    };
+  };
+
   render() {
     return (
       <>
