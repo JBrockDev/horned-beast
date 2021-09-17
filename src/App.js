@@ -42,6 +42,7 @@ class App extends Component {
         <Header
           title="Horned Beasts"
           beasts={beasts}
+          filteredBeasts={this.state.beasts}
           searchHandler={this.searchBeasts}
         />
         <SelectedBeast
